@@ -1,12 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Nunito:wght@400;600&display=swap');
 /* RESET: border-box makes padding and border count inside the width,
    so boxes don't grow past their set size */
 *{
     box-sizing: border-box;
 }
+/* BODY: soft rounded font, easy to read in long text(feedback, previous version was too basic) */ 
 body{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 500;
     margin: 0;
+}
 
+h3, h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+}
+
+/* HEADER QUOTE: the italic version looks calligraphic */
+.header-quote {
+    font-style: italic;
+}
+h1 {
+    font-size: clamp(2.5rem, 7vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+/* form fields ignore the page font unless told to inherit */
+input, button {
+    font-family: inherit;
+}
+
+h1, h2 {
+    font-family: 'Parisienne', cursive;
+    font-weight: 400; /* Parisienne only has one weight */
 }
 
 header{
@@ -57,7 +87,6 @@ nav a:hover{
     display: flex;
     gap: 30px;
     align-items: flex-start;
-    font-family: 'Times New Roman', Times, serif;
     background-color: #f5f0ff;
     color: #222;
     padding: 20px;
