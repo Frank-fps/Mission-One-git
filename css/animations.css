@@ -77,6 +77,14 @@ another tricky thing, added a space before hover which caused the texts
     transform: translateY(0);
 }
 
+.card .card-info h3 {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 6px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
 /* FADE THE REST: when any card in the row is hovered, every OTHER card
    fades and blurs. :has() lets the container react to its child. */
 .books:has(.card:hover) .card:not(:hover),
