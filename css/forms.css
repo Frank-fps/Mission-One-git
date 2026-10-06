@@ -1,0 +1,26 @@
+/* wrote signin alone, 10 minutes to realise. not a fun time ;( */
+.signin-form{
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #f5f0ff;
+    border-radius: 8px;
+}
+
+.signin-form label{
+    display: block;
+    margin-top: 15px;
+
+}
+/* music while coding helps soooo much *classical music* */
+.signin-form input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.signin-form button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Novel List</title>
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h1><a href="index.html">My Novel List</a></h1></div>
+        <blockquote class="header-quote">
+            <p>A journey of a thousand miles begins with a single step</p>
+        </blockquote>
+        <!-- NAV: It contains the main navigation links for the website -->
+        <nav>
+            <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- MAIN: Core content of this specific page -->
+    <main>
+      <!-- TOP PICKS: my best books, shown as cards in one row -->
+      <section class="intro">
+        <h2>Welcome</h2>
+        <p>This is a website create for book lovers.</p>
+      </section>
+      <section class="top-picks">
+        <h2>Top Picks</h2>
+        <!-- .books is the flex container that arranges the cards -->
+        <div class="books">
+          <!-- CARD: one book. Copy this block for each book -->
+          <article class="card">
+            <!-- alt text describes the image for screen readers -->
+            <img src="images/LOTM.jpg" alt="Lord of The Mysteries">
+            <h3>Lord of The Mysteries</h3>
+            <p class="author">By Cuttlefish That Loves Diving</p>
+            <p class="rating">Rating: 4.9/5</p>
+            <!-- Link goes to this book's own detail page -->
+             <!-- had a 'book' section once renamed to book1 the server gave me an error when opening the page
+              closing and reopening vscode fixed it. probably stuck in a previous version -->
+            <a href="book1.html">Read More</a>
+          </article>  
+          <article class="card">
+            <img src="images/RZ.jpg" alt="Re Zero">
+            <h3>Re Zero</h3>
+            <p class="author">By Tappei Nagatsuki</p>
+            <p class="rating">Rating: 5/5</p>
+            <a href="book2.html">Read More</a>
+          </article>  
+          <article class="card">
+            <img src="images/RI.jpg" alt="Reverent Insanity">
+            <h3>Reverent Insanity</h3>
+            <p class="author">By Gu Zhen Ren</p>
+            <p class="rating">Rating: 4.5/5</p>
+            <a href="book3.html">Read More</a>
+          </article>  
+        </div>
+      </section>  
+    </main>
+     <!-- FOOTER: copyright and extra links, repeated on every page -->
+    <footer>
+        <p><a href="about.html">About Us</a></p>
+        <p><small>&copy; 2026 Francis. All rights reserved.</small></p>
+    </footer>
+</body>
+</html>

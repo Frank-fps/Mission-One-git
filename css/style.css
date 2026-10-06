@@ -1,0 +1,202 @@
+/* RESET: border-box makes padding and border count inside the width,
+   so boxes don't grow past their set size */
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+
+}
+
+header{
+    padding: 60px;
+    text-align: center;
+    background: lavender;
+    color: black;
+
+
+}
+
+.logo a{
+    color: inherit;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    background-color: aliceblue;
+
+}
+/* NAV: the list is a flex row; gap spaces the links, and
+   list-style: none removes the bullets */
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+/* CARD ROW: flex puts the cards side by side in one row */
+.books{
+    display: flex;
+    gap: 10px; 
+}
+/* BOOK PAGE: cover on the left, info on the right (flex row) */
+.book-details{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f5f0ff;
+    color: #222;
+    padding: 20px;
+    border-radius: 8px;
+}
+.book-info{
+    flex: 1;
+    margin-left: 20px;
+}
+
+.book-cover{
+    flex: 0 0 300px;
+    width: 300px;
+}
+
+.card{
+    text-align: left;
+    margin-left: 20px;
+    color: #222;
+}
+
+.card h3{
+    color: #5b3a8c;
+}
+/* CARD IMAGES: same height for every cover; object-fit: cover
+   crops instead of stretching */
+.card img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* typed colour instead of color, couldn't see my changes, a quick scan helped me figure it out */
+footer{
+    text-align: center;
+    color: black;
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.books-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.stars{
+    color: gold;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.reviews{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    /* "margin-top" had double semicolons. doesn't affect code but better to remove it. */
+}
+
+/* I forgot a closing </div>, so the review text sat inside the flex row and got cut in half.
+ I found the error using the inspect function in browser*/
+.review-header{
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* "Review" didn't match .review. I switched to lowercase everywhere */
+.review{
+    display:flex;
+    flex-direction: column;
+    background: #f1f1f1;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tiers{
+    display: flex;
+    gap: 20px;
+}
+
+.tier{
+    flex: 1;
+    background: #f5f0ff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.price{
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.support-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #553317;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* ABOUT: centred panel so the text doesn't run edge to edge */
+.about {
+    max-width: 800px;
+    margin: 30px auto; /* auto left and right centres the box */
+    padding: 30px;
+    background: #f5f0ff;
+    border-radius: 8px;
+    line-height: 1.6; /* more space between lines is easier to read */
+}
+
+/* ABOUT: underline each sub-heading to separate the sections */
+.about h3 {
+    margin-top: 25px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid lavender;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* RESPONSIVE: on screens 600px or narrower, stack things vertically */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+        .book-details {
+        flex-direction: column;
+    }
+    .book-cover{
+        width: 100%;
+        flex: none;
+    }
+    .tiers{
+        flex-direction: column;
+    }
+}

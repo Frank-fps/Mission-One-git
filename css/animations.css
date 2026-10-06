@@ -1,0 +1,65 @@
+
+/* SUPPORT BUTTON: grows slightly and darkens on hover, cool thing i found while browsing,
+ adds some life to the page*/
+.support-btn{
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.support-btn:hover{
+    transform: scale(1.08);
+    background-color: #7a4a22;
+}
+
+/* STARS: pop in after a 0.3s delay refer to keyframe/pop for details */
+.stars{
+    animation: pop 0.5s ease 0.3s both;
+}
+/* HEADER: fades in over 1 second when the page loads */
+header{
+    animation: fadein 1s ease;
+}
+/* CARDS: rise and fade in on load; transition makes the hover change smooth.
+   /* "backwards" instead of "both": "both" kept the end transform locked
+   on, so :hover could not move the card */
+.card{
+    animation: fadeup 0.6s ease backwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+/* delay animations for each title 0.15s after the previous one. */
+.card:nth-child(2) {animation-delay: 0.15s;}
+.card:nth-child(3) {animation-delay: 0.3s;}
+.card:nth-child(4) {animation-delay: 0.45s;}
+.card:nth-child(5) {animation-delay: 0.6s;}
+.card:nth-child(6) {animation-delay: 0.75s;}
+
+/* HOVER: card lifts up and gets a shadow (no space before :hover)
+another tricky thing, added a space before hover which caused the texts
+ to hover aswell individually, not ideal few mins to solve it. */
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ABOUT: panel rises and fades in on load, reusing fadeup */
+.about {
+    animation: fadeup 0.6s ease backwards;
+}
+
+/* KEYFRAMES: define what the animation does (name must match exactly where it's used)
+had some real problems figuring that out, sigh */
+/* fadeup can be in caps or lowercase, but they both have to match, this took a long time to see.
+no erros, but animations didn't show until fixed */
+@keyframes fadeup{
+    from{opacity: 0; transform: translateY(30px); } /* start: invisible, pushed down */
+    to  { opacity: 1; transform:  translate(0); }  /* end: visible, in place */
+}
+
+@keyframes fadein{
+    from {opacity: 0; }
+    to   {opacity: 1; }
+}
+
+@keyframes pop {
+    from  {transform: scale(0);}  /* start: size 0 */
+    to    { transform: scale(1);} /* end: normal size */
+}
